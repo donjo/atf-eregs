@@ -1,11 +1,10 @@
-import json
 import os
 
-from regcore.settings.base import *
+from regcore.settings.base import *  # noqa
 REGCORE_APPS = tuple(INSTALLED_APPS)
 REGCORE_DATABASES = dict(DATABASES)
 
-from regulations.settings.base import *
+from regulations.settings.base import *  # noqa
 REGSITE_APPS = tuple(INSTALLED_APPS)
 
 INSTALLED_APPS = ('overextends', 'atf_eregs',) + REGCORE_APPS + REGSITE_APPS
@@ -23,6 +22,7 @@ DATA_LAYERS = (
     'regulations.generator.layers.defined.DefinedLayer',
     'regulations.generator.layers.definitions.DefinitionsLayer',
     'regulations.generator.layers.external_citation.ExternalCitationLayer',
+    'regulations.generator.layers.footnotes.FootnotesLayer',
     'regulations.generator.layers.formatting.FormattingLayer',
     'regulations.generator.layers.internal_citation.InternalCitationLayer',
     'regulations.generator.layers.key_terms.KeyTermsLayer',
@@ -33,5 +33,6 @@ DATA_LAYERS = (
 )
 
 SIDEBARS = (
+    'atf_eregs.sidebar.Rulings',
     'regulations.generator.sidebar.help.Help',
 )
