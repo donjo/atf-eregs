@@ -1,0 +1,45 @@
+.about-content {
+    h3 {
+        margin: 0 0 30px 0;
+        font-size: 28px;
+    }
+    .dev-well h3 {  /* Reset */
+        font-size: 1em;
+    }
+}
+
+.title-hero {
+    background-color: $atf_hero_background;
+    color: $atf_hero_text_color;
+
+    h2 {
+        font-size: 34px;
+        padding: 24px 0;
+        margin: 0;
+        @include sans-font-light;
+    }
+}
+
+.about-ol > li:before{
+    background: $atf_carrots;
+}
+
+.about-stopcompare {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.icon-red {
+    color: #d14124;
+}
+
+.about-stopcompare-img.about-stopcompare-img {
+    margin-top: 35px;
+}
+
+@media only screen and ( min-width: 780px ) {
+    #related-info .content-secondary {
+        /* Overrides value set in layout.scss */
+        width: 25%;
+    }
+}
